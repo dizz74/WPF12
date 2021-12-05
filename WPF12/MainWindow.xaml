@@ -17,7 +17,7 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Rectangle Width="32" Height="32" RadiusX="5" RadiusY="5" Stroke="#FF9D9D9D" StrokeThickness="2" />
-                            <Ellipse  x:Name="circle" Fill="#FF9D9D9D" Width="16" Height="16"  /> 
+                            <Ellipse  x:Name="circle" Fill="#FF9D9D9D" Width="16" Height="16"  />
                             <Path x:Name="crossed"  Stroke="#FF9D9D9D" StrokeThickness="3" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <Path.Data>
                                     <GeometryGroup  >
@@ -28,13 +28,11 @@
                                 </Path.Data>
                             </Path>
                             <ContentPresenter Grid.Row="1"/>
-
-
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter TargetName="circle" Property="Opacity" Value="0"/>
-                                <Setter TargetName="crossed" Property="Opacity" Value="1"/> 
+                                <Setter TargetName="crossed" Property="Opacity" Value="1"/>
                             </Trigger>
                             <Trigger Property="IsChecked" Value="{x:Null}">
                                 <Setter TargetName="circle" Property="Opacity" Value="1"/>
@@ -54,6 +52,6 @@
         <CheckBox Content="Checked" IsChecked="True"/>
         <CheckBox Content="UnChecked" IsChecked="False"/>
         <CheckBox Content="Indeterminate" IsChecked="{x:Null}"/>
-        
+
     </UniformGrid>
 </Window>
